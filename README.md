@@ -15,7 +15,7 @@ User can use commands to buy cart if items are in stock and user has sufficient 
  HOW TO COMPILE:
  use command "make"
  
- HOW TO COMPILE:
+ HOW TO RUN:
  use command "./amazon database.txt"
  
  IMPORTANT: database.txt can be edited to alter products and users, or database.txt can be replaced with other databse file.
