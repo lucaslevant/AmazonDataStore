@@ -4,12 +4,10 @@
 #include "product.h"
 #include "util.h"
 
-
 Movie::Movie(const std::string category, std::string name, double price, int qty, std::string genre, std::string rating):
 		Product(category, name, price, qty),
-    genre_(genre),
+    		genre_(genre),
 		rating_(rating)
-
 {
 
 }
@@ -20,14 +18,13 @@ Movie::~Movie()
 } 
 
 std::set<std::string> Movie::keywords() const{
-	std::set<std::string> c;
-  std::string key = convToLower(name_);
+std::set<std::string> c;
+std::string key = convToLower(name_);
 	c = parseStringToWords(key);
 	c.insert(convToLower(genre_));
 	return c;
 }
-
-  std::string Movie::displayString() const{
+std::string Movie::displayString() const{
 	std::string final;
 	std::stringstream stream;
 
@@ -44,7 +41,6 @@ std::set<std::string> Movie::keywords() const{
 
 	final = name_ + '\n' + "Genre: " + genre_ +  " Rating: " + rating_ + '\n' +  price + " " + qty + " left";
 	return final;
-	
 }
 
  void Movie::dump(std::ostream& os) const{
