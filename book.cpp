@@ -16,12 +16,12 @@ Book::~Book()
 
 }
   std::set<std::string> Book::keywords() const{
-	std::set<std::string> c;
+  std::set<std::string> c;
   std::string key = convToLower(name_) + " " + convToLower(author_);
-	std::cout << key << std::endl;
-	c = (parseStringToWords(key));
-	c.insert(isbn_);
-	return c;
+  std::cout << key << std::endl;
+  c = (parseStringToWords(key));
+  c.insert(isbn_);
+  return c;
 }
   std::string Book::displayString() const{
 	std::string final;
