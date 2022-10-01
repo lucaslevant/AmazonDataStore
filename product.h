@@ -41,7 +41,7 @@ public:
     void subtractQty(int num);
 
 protected:
-		std::string name_;
+    std::string name_;
     double price_;
     int qty_;
     std::string category_;
