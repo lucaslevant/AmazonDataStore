@@ -31,7 +31,6 @@ int main(int argc, char* argv[])
 
     MyDataStore ds;
 
-
     ProductSectionParser* productSectionParser = new ProductSectionParser;
     productSectionParser->addProductParser(new ProductBookParser);
     productSectionParser->addProductParser(new ProductClothingParser);
@@ -96,19 +95,19 @@ int main(int argc, char* argv[])
                     hit_result_index--;
                     ds.addCart(username, hits[hit_result_index]);
                 }
-                else{
-                    cout << "Invalid request" << endl;
+	     else{
+		cout << "Invalid request" << endl;
                 }							
             }
-		    else if( cmd == "VIEWCART"){
+	     else if( cmd == "VIEWCART"){
                 ss >> username;
                 ds.viewCart(username);
             }			
-			else if( cmd == "BUYCART"){
+    	     else if( cmd == "BUYCART"){
                 ss >> username;
                 ds.buyCart(username);
             }
-            else if ( cmd == "QUIT") {
+             else if ( cmd == "QUIT") {
                 string filename;
                 if(ss >> filename) {
                     ofstream ofile(filename.c_str());
