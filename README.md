@@ -1,5 +1,5 @@
 # AmazonDataStore
-This program emulates an online amazon STORE.
+This program emulates an online Amazon store.
  - Name: Lucas LeVant
  - Email: levant@usc.edu 
 
