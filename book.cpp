@@ -5,9 +5,9 @@
 #include "util.h"
 
 Book::Book(const std::string category, std::string name, double price, int qty, std::string isbn, std::string author):
-		Product(category, name, price, qty),
-    		isbn_(isbn),
-		author_(author)
+	Product(category, name, price, qty),
+	isbn_(isbn),
+	author_(author)
 {
 
 }
