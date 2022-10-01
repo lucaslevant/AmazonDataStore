@@ -5,11 +5,10 @@
 #include "util.h"
 
 
-
 Clothing::Clothing(const std::string category, std::string name, double price, int qty, std::string size, std::string brand):
-		Product(category, name, price, qty),
-    size_(size),
-		brand_(brand)
+	Product(category, name, price, qty),
+	size_(size),
+	brand_(brand)
 
 {
 
@@ -20,14 +19,13 @@ Clothing::~Clothing()
 
 }
 
-  std::set<std::string> Clothing::keywords() const{
+std::set<std::string> Clothing::keywords() const{
 	std::set<std::string> c;
-  std::string key = convToLower(name_) + " " + convToLower(brand_);
+ 	std::string key = convToLower(name_) + " " + convToLower(brand_);
 	c = parseStringToWords(key);
 	return c;
 }
-
-  std::string Clothing::displayString() const{
+std::string Clothing::displayString() const{
 	std::string final;
 	std::stringstream stream;
 
@@ -44,7 +42,7 @@ Clothing::~Clothing()
 
 	final = name_ + '\n' + "Size: " + size_ + " Brand: " + brand_  + '\n' + price + " " + qty + " left";
 	return final;
-	
+
 }
 
  void Clothing::dump(std::ostream& os) const{
