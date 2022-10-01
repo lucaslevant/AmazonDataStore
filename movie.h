@@ -7,15 +7,14 @@
 
 
 class Movie : public Product {
-	public:
+public:
 	Movie(const std::string category, std::string name, double price, int qty, std::string genre, std::string rating);
-    ~Movie();
-		 std::set<std::string> keywords() const override;
-     std::string displayString() const override; 
-     void dump(std::ostream& os) const override;
-	protected:
+        ~Movie();
+	std::set<std::string> keywords() const override;
+        std::string displayString() const override; 
+        void dump(std::ostream& os) const override;
+protected:
 
-		std::string genre_;
-    std::string rating_;
-
+	std::string genre_;
+        std::string rating_;
 };
