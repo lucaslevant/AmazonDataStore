@@ -18,9 +18,7 @@ DBParser::DBParser()
 }
 DBParser::~DBParser()
 {
-    for(map<string, SectionParser*>::iterator it = parsers_.begin();
-            it != parsers_.end();
-            ++it) {
+    for(map<string, SectionParser*>::iterator it = parsers_.begin();it != parsers_.end(); ++it) {
         delete it->second;
     }
 }
@@ -92,9 +90,7 @@ bool DBParser::parse(string db_filename, DataStore& ds)
         lineno_++;
     }
     if(!error_) {
-        for(map<string, SectionParser*>::iterator it = parsers_.begin();
-                it != parsers_.end();
-                ++it)
+        for(map<string, SectionParser*>::iterator it = parsers_.begin(); it != parsers_.end(); ++it)
         {
             it->second->reportItemsRead(cout);
         }
@@ -108,9 +104,7 @@ ProductSectionParser::ProductSectionParser()
 }
 ProductSectionParser::~ProductSectionParser()
 {
-    for(map<string, ProductParser*>::iterator it = prodParsers_.begin();
-            it != prodParsers_.end();
-            ++it) {
+    for(map<string, ProductParser*>::iterator it = prodParsers_.begin(); it != prodParsers_.end(); ++it) {
         delete it->second;
     }
 }
