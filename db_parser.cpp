@@ -8,8 +8,6 @@
 #include <locale>
 #include "db_parser.h"
 #include "util.h"
-
-
 using namespace std;
 
 
@@ -17,7 +15,6 @@ DBParser::DBParser()
 {
     lineno_ = 1;
     error_ = false;
-
 }
 DBParser::~DBParser()
 {
@@ -27,8 +24,7 @@ DBParser::~DBParser()
         delete it->second;
     }
 }
-void DBParser::addSectionParser(const std::string& sectionName,
-                                SectionParser*     parser)
+void DBParser::addSectionParser(const std::string& sectionName,SectionParser*parser)
 {
     parsers_.insert(make_pair(sectionName, parser));
 }
