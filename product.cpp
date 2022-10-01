@@ -2,7 +2,6 @@
 #include <iomanip>
 #include "product.h"
 
-
 Product::Product(const std::string category, const std::string name, double price, int qty) :
     name_(name),
     price_(price),
@@ -38,10 +37,6 @@ int Product::getQty() const
     return qty_;
 }
 
-/**
- * default implementation...can be overriden in a future
- * assignment
- */
 bool Product::isMatch(std::vector<std::string>& searchTerms) const
 {
     return false;
