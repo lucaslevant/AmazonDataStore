@@ -14,7 +14,6 @@ public:
         std::string displayString() const override; 
         void dump(std::ostream& os) const override;
 protected:
-
 	std::string genre_;
         std::string rating_;
 };
