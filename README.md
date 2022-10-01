@@ -10,7 +10,7 @@ User can use commands to add products to a user cart.
 User can use commands to view products in cart.
 User can use commands to buy cart if items are in stock and user has sufficient funds.
 
-###  Notes
+###  USAGE
 Enter "AND" plus keywords: Returns all prodcuts that contain all searched keywords
 Enter "OR" plus keywords: Returns all prodcuts that contain at least one of searched keywords
 Enter "ADD" plus username plus hit_number: Adds product to user cart
