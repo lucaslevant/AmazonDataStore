@@ -21,22 +21,14 @@ ProductParser::~ProductParser()
 }
 
 
-Product* ProductParser::parse(string category,
-                              istream& is,
-                              bool& error,
-                              string& errorMsg,
-                              int& lineno)
+Product* ProductParser::parse(string category, istream& is, bool& error, string& errorMsg, int& lineno)
 {
-
     parseCommonProduct(is, error, errorMsg, lineno);
     if(error) return NULL;
     return parseSpecificProduct(category, is, error, errorMsg, lineno);
 }
 
-void ProductParser::parseCommonProduct(std::istream& is,
-                                       bool& error,
-                                       string& errorMsg,
-                                       int& lineno)
+void ProductParser::parseCommonProduct(std::istream& is, bool& error, string& errorMsg, int& lineno)
 
 {
     string myline;
@@ -85,11 +77,7 @@ ProductBookParser::ProductBookParser() : ProductParser()
 {
 }
 
-Product* ProductBookParser::parseSpecificProduct(std::string category,
-        std::istream& is,
-        bool& error,
-        std::string& errorMsg,
-        int& lineno)
+Product* ProductBookParser::parseSpecificProduct(std::string category, std::istream& is, bool& error, std::string& errorMsg, int& lineno)
 {
     string myline;
     getline(is, myline);
@@ -116,7 +104,6 @@ Product* ProductBookParser::parseSpecificProduct(std::string category,
         return NULL;
     }
     return makeProduct();
-
 }
 
 std::string ProductBookParser::categoryID()
@@ -124,16 +111,10 @@ std::string ProductBookParser::categoryID()
     return "book";
 }
 
-
-/**
- * Your job to fill in the code to create a new book product
- * using the data members in this class and the parent ProductParser class
- */
 Product* ProductBookParser::makeProduct()
 {
-
-		Product* book = new Book("book", prodName_, price_, qty_, isbn_, author_ );
-		return book;
+    Product* book = new Book("book", prodName_, price_, qty_, isbn_, author_ );
+    return book;
 
 }
 
@@ -142,11 +123,7 @@ ProductClothingParser::ProductClothingParser()
 {
 }
 
-Product* ProductClothingParser::parseSpecificProduct(std::string category,
-        std::istream& is,
-        bool& error,
-        std::string& errorMsg,
-        int& lineno)
+Product* ProductClothingParser::parseSpecificProduct(std::string category, std::istream& is, bool& error, std::string& errorMsg, int& lineno)
 {
     string myline;
     getline(is, myline);
@@ -181,21 +158,11 @@ std::string ProductClothingParser::categoryID()
     return "clothing";
 }
 
-
-/**
- * Your job to fill in the code to create a new clothing product
- * using the data members in this class and the parent ProductParser class
- */
 Product* ProductClothingParser::makeProduct()
 {
-
-	Product* clothing = new Clothing("clothing", prodName_, price_, qty_, size_, brand_ );
-	return clothing;
-
-
-
+    Product* clothing = new Clothing("clothing", prodName_, price_, qty_, size_, brand_ );
+    return clothing;
 }
-
 
 
 ProductMovieParser::ProductMovieParser()
@@ -203,11 +170,7 @@ ProductMovieParser::ProductMovieParser()
 }
 
 
-Product* ProductMovieParser::parseSpecificProduct(std::string category,
-        std::istream& is,
-        bool& error,
-        std::string& errorMsg,
-        int& lineno)
+Product* ProductMovieParser::parseSpecificProduct(std::string category, std::istream& is, bool& error, std::string& errorMsg, int& lineno)
 {
     string myline;
     getline(is, myline);
@@ -236,7 +199,6 @@ Product* ProductMovieParser::parseSpecificProduct(std::string category,
         return NULL;
     }
     return makeProduct();
-
 }
 
 std::string ProductMovieParser::categoryID()
@@ -244,16 +206,8 @@ std::string ProductMovieParser::categoryID()
     return "movie";
 }
 
-
-/**
- * Your job to fill in the code to create a new movie product
- * using the data members in this class and the parent ProductParser class
- */
 Product* ProductMovieParser::makeProduct()
 {
-
-	Product* movie = new Movie("movie", prodName_, price_, qty_, genre_, rating_ );
-	return movie;
-
-
+    Product* movie = new Movie("movie", prodName_, price_, qty_, genre_, rating_ );
+    return movie;
 }
