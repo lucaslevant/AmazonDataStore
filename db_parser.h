@@ -11,14 +11,11 @@
 //and returns item that has all key words, or returns items with any of those key words
 //each item has name, price, quantity, plus 2 special traits
 //use display products to output corresponding products
-//Create map that has keywords linked to products so that you are not iterating over every item
 //cart is a FIFO queue that holds duplicate items
   //If the username or hit_result_index is either not provided, or invalid, print Invalid request
   //you should be able to ADD same thing multiple times
   //user enters key words with and/or, corresponding products are displayed, user types add name and index of hit, and they are added to category
   //view cart needs to oupt which item number is which
-  //cart implementation must iterate through the products in the order they were added
-    //thus use pop() to access first added item, and add with push_back
 /**
  * Interface for all section parsers_
  *  A section parser parses everything between
