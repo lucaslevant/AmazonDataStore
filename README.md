@@ -8,10 +8,10 @@ User can also use commands to view products in cart and buy cart if items are in
 -----------------------------------------------------------------------------------------------------------------------------------------
 ###  USAGE
 Enter "AND" plus keywords: Returns all prodcuts that contain all searched keywords.
-Enter "OR" plus keywords: Returns all prodcuts that contain at least one of searched keywords.
-Enter "ADD" plus username plus hit_number: Adds product to user cart.
-Enter "VIEWCART" plus keywords: Returns all prodcuts in user's cart.
-Enter "BUYCART" plus keywords: Purchases products in user's cart in order that they were added.
+Enter "OR" <keywords>: Returns all prodcuts that contain at least one of searched keywords.
+Enter "ADD" <username> <hit_number>: Adds product to user cart.
+Enter "VIEWCART" <keywords>: Returns all prodcuts in user's cart.
+Enter "BUYCART" <keywords>: Purchases products in user's cart in order that they were added.
 -----------------------------------------------------------------------------------------------------------------------------------------
 HOW TO COMPILE:
 use command "make"
