@@ -2,11 +2,9 @@
 This program emulates an online Amazon store.
 -----------------------------------------------------------------------------------------------------------------------------------------
 Products and Users are stored into a database.
-every product can be searched and retrieved from the database.
-User can use commands to search database for products based on keywords.
-User can use commands to add products to a user cart.
-User can use commands to view products in cart.
-User can use commands to buy cart if items are in stock and user has sufficient funds.
+Every product can be searched and retrieved from the database.
+User can use commands to search database for products based on keywords, as well as to add products to a user cart.
+User can also use commands to view products in cart and buy cart if items are in stock and user has sufficient funds.
 -----------------------------------------------------------------------------------------------------------------------------------------
 ###  USAGE
 Enter "AND" plus keywords: Returns all prodcuts that contain all searched keywords.
