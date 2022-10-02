@@ -1,7 +1,7 @@
 # AmazonDataStore
 This program emulates an online Amazon store.
 -----------------------------------------------------------------------------------------------------------------------------------------
-Products and Users are stored into a database
+Products and Users are stored into a database.
 every product can be searched and retrieved from the database.
 User can use commands to search database for products based on keywords.
 User can use commands to add products to a user cart.
