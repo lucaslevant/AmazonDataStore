@@ -1,7 +1,5 @@
 # AmazonDataStore
 This program emulates an online Amazon store.
- - Name: Lucas LeVant
- - Email: levant@usc.edu 
 -----------------------------------------------------------------------------------------------------------------------------------------
 Products and Users are stored into a database
 every product can be searched and retrieved from the database.
